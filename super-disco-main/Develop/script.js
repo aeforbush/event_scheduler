@@ -1,16 +1,13 @@
-// VARIABLES
-
-
 // when opened display current month, day, year
 $("#currentDay").text(moment().format('MM/DD/YY'));
 // console.log(currentDay);
 
 // color code blocks for past, present, or future
-
 $(document).ready(function() {
     colorChange();
-    renderText();
+    //createTask();
 })
+
 
 function colorChange() {
     var currentTime = moment().hours();
@@ -40,9 +37,40 @@ $(".input").each(function() {
 })
 };
 
-// ability to add tasks
-function renderText() {
+// variables for saving task and where it goes
+var taskText;
+var taskTime;
 
+// event handler for saveBtn (getting value from content and saving it to local storage)
+$(".saveBtn").click(function() {
+    taskText = $(this).siblings(".input").val();
+    console.log(taskText);
+    taskTime = $(this).siblings("#hour").text();
+    console.log(taskTime);
+
+    localStorage.setItem(taskTime, JSON.stringify(taskText));
+
+    colorChange();
+    //createTask();
+})
+
+var tasks = []
+// ability to add tasks
+var createTask = function(taskText, taskTime) {
+    var taskInput = $("<textarea")
+    .addClass("input")
+    .text(taskText);
+
+    // append textarea and input element
+    taskInput.append(taskText);
+
+    // append to textarea on page
+    $("hour" + taskInput).append(taskText);
+};
+
+var loadTasks = function() {
+    tasks = JSON.parse(localStorage.getItem("tasks"));
+    console.log(tasks);
 }
 
 
