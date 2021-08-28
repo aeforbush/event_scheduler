@@ -67,7 +67,7 @@ textarea{
 .saveBtn {
   border-left: 1px solid black;
   border-radius: 5px;
-  background-color: rgb(60, 47, 245);
+  background-color: rgb(57, 27, 228);
   color: white;
 }
 
@@ -79,7 +79,7 @@ textarea{
 .deleteBtn {
   border-left: 1px solid black;
   border-radius: 5px;
-  background-color: rgb(214, 210, 210);
+  background-color: rgb(3, 0, 0);
   color: white;
 
 }
