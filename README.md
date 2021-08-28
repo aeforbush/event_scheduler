@@ -15,7 +15,7 @@
 * Add button saves initials and score to local storage
 
 # Application
-* Deployed link: 
+* Deployed link: https://aeforbush.github.io/event_scheduler/
 
 # Screenshot 
 <img width="1066" alt="Screen Shot 2021-08-28 at 11 06 45 AM" src="https://user-images.githubusercontent.com/87487655/131225452-4bee9f1b-f3db-411c-8fbe-de4999b8701d.png">
